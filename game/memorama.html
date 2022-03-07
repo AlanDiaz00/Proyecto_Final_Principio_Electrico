@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memorama</title>
+
+        <link rel="stylesheet" href="../css/memorama.css">
+        <link rel="icon" href="../img/Games.png">
+    </head>
+
+    <body>
+        <header>
+            <nav class="nav-menu">
+                <label for="btn-reboot">
+                    <img src="../icon/menu_white.svg" class="img-boton">
+                </label>
+
+                <footer>
+                    <label for="btn-config">
+                        <img src="../img/config.png" class="img-boton">
+                    </label>
+                </footer>
+            </nav>
+        </header>
+
+        <main class="body-fondo">
+            <div class="tablero div-acomodo" id="tablero"></div>
+        </main> 
+
+        <input type="checkbox" id="btn-reboot">
+        <div class="div-reboot">
+            <div class="div-reb">
+                <h2>Nueva Partida</h2>
+
+                <div class="reboot">
+                    <div class="espanzor"></div>
+
+                    <button class="nuevo-juego" onclick="generarTablero()">Nuevo Partida</button>
+                    <label for="btn-reboot">Atras</label>
+                </div>
+            </div>
+        </div>
+
+        <input type="checkbox" id="btn-config">
+        <div class="div-config">
+            <div class="div-con">
+                <h2>Configuracion</h2>
+
+                <div class="config">
+                    <div class="espanzor"></div>
+                    <label for="btn-config">Atras</label>
+                </div>
+            </div>
+        </div>
+        
+        <audio id="audio" onchange="load_music()"></audio>
+    </body>
+
+    <script src="../js/memorama.js"></script>
+    <script src="./js/song.js"></script>
+</html>

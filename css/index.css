@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    font-size: 16px;
+    margin-top: 55px;
+    background-color: #f9f9f9;
+}
+
+main{
+    margin: 4rem 4.5rem;
+}
+
+/*=============================================*/
+/*=============Scroll Personalizado============*/
+/*=============================================*/
+body::-webkit-scrollbar{
+    width: 12px;
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--negro);
+    border-radius: 100px;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*===============Pie de la pagina==============*/
+/*=============================================*/
+.pie{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #333;
+    position: relative;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*=============Imagenes de la pagina===========*/
+/*=============================================*/
+.img-logo{
+    width: 40px;
+    height: 40px;
+}
+.img-menu{
+    width: 30px;
+    height: 30px;
+}
+.img-cerrar{
+    width: 20px;
+    height: 20px;
+}
+.img-slider{
+    height: 600px;
+}
+.img-col{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*=================caja de mensaje=============*/
+/*=============================================*/
+#btn-mensaje{
+    display: none;
+}
+#btn-mensaje:checked ~ .div-mensaje{
+    opacity: 1;
+    visibility: visible;
+}
+.div-mensaje{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.div-mensaje .div-message{
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    flex-direction: column;
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid #24303c;
+    border-radius: 10px;
+}
+.div-mensaje .div-message h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.div-mensaje .div-message label{
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #24303c;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*==============Botones de regreso=============*/
+/*=============================================*/
+.div-regresar{
+    position: fixed;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    top: 2%;
+    left: 4%;
+}
+.div-regresar a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    text-align: center;
+    padding: 6px;
+    color: #333;
+    box-shadow: -8px -8px 20px 0px #0001, -6px -6px 6px 0px #0001,
+        8px 8px 20px rgba(0,0,0,0.2), 5px 5px 6px 0px rgba(0,0,0,0.2);
+}
+.div-regresar a:active{
+    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.2), inset -5px -5px 6px rgba(0,0,0,0.2),
+    inset 8px 8px 20px #0003, inset 5px 5px 6px #0001;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*============Carrusel del boostrasp===========*/
+/*=============================================*/
+.zindex{
+    z-index: -1;
+    position: relative;
+    
+}
+.div-slider{
+    margin-bottom: 20px;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*==============Caja de Contacto===============*/
+/*=============================================*/
+.div-contacto{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+.div-contacto .div-red{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: auto;
+}
+.div-contacto .div-red a{
+    text-decoration: none;
+    font-size: 50px;
+}
+.div-contacto .div-red a:hover{
+    color: #4357ad;
+}
+
+.facebook{
+    color: #221691;
+}
+.twitter{
+    color: #246eb8;
+}
+.email{
+    color: #a04c4c;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*===========Apartado del contenido============*/
+/*=============================================*/
+.div-main{
+    width: 85%;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+.div-main div a{
+    background-color: #4357ad;
+    color: #fff;
+}
+.div-main div a:hover{
+    background-color: #24303c;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*==========La tarjeta de los juegos===========*/
+/*=============================================*/
+.wrap{
+	width: 100%;
+    max-width: 1100px;
+	margin: 15.5% auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.tarjeta-wrap{
+	margin: 10px;
+	-webkit-perspective: 800;
+	perspective: 800;
+}
+
+.tarjeta{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transition: .7s ease;
+	transition: .7s ease;
+	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+
+}
+
+.adelante, .atras{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.adelante{
+	width: 100%;
+}
+
+.atras{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	padding: 15px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+
+	text-align: center;
+	color: #fff;
+	font-family: "open sans";
+    background-color: #333;
+}
+.atras a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #4357ad;
+    color: #fff;
+    border-radius: 10px;
+}
+.atras a:hover{
+    background-color: #246eb8;
+}
+
+.tarjeta-wrap:hover .tarjeta{
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.card1{
+	background-image: url(../img/memory.png);
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+	object-fit: cover;
+}
+
+.card2{
+	background-image: url(../img/snake.png);
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+	object-fit: cover;
+}
+
+.card3{
+	background-image: url(img/3.jpg);
+	background-size: cover;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*==============Tabla de Compatible============*/
+/*=============================================*/
+.div-tabla{
+    margin: 17% 6%;
+    text-align: center;
+}
+.div-tabla h2{
+    margin-bottom: 15px;
+}
+.div-tabla .tabla{
+    width: 100%;
+}
+.div-tabla .tabla tr .num{
+    width: 4%;
+}
+.div-tabla .tabla tr th{
+    width: 30%;
+    background-color: #4357ad;
+    color: #f9f9f9;
+    padding: 6px;
+}
+.div-tabla .tabla tr td .yes{
+    color: green;
+    font-size: 20px;
+}
+.div-tabla .tabla tr td .not{
+    color: red;
+    font-size: 20px;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*==============Caja de los Cookis=============*/
+/*=============================================*/
+#btn-cookies{
+    display: none;
+}
+#btn-cookies:checked ~ .div-cookies{
+    opacity: 1;
+    visibility: visible;
+}
+
+.div-cookies{
+    display: flex;
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s all;
+}
+.div-cookies .cookies{
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 2px solid #4357ad;
+    display: flex;
+    flex-direction: column;
+}
+/*=============================================*/
+
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+/*=============================================*/
+
+/*=============================================*/
+/*=================Media Cuerys================*/
+/*=============================================*/
+@media (max-width: 980px){
+    main{
+        margin: 2.5rem 3rem;
+    }
+    .wrap{
+        margin: 9% auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .img-slider{
+        height: 350px;
+    }
+}
+
+@media (max-width: 600px) {
+    main{
+        margin: 2rem 2.5rem;
+    }
+
+    .div-slider{
+        margin-top: 30px;
+    }
+    .img-slider{
+        height: 300px;
+    }
+
+    .wrap{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 550px) {
+    .div-slider{
+        margin-top: 30px;
+    }
+    .img-slider{
+        height: 250px;
+    }
+}
+@media (max-width: 450px) {
+    .div-slider{
+        margin-top: 40px;
+    }
+    .img-slider{
+        height: 150px;
+    }
+}
+/*=============================================*/

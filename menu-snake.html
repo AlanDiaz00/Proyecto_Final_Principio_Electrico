@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es" class="html-snake">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Snake</title>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/games.css">
+        <link rel="stylesheet" href="./css/cajas.css">
+        <link rel="icon" href="./img/Games.png">
+    </head>
+
+    <body>
+        <div class="div-snake">
+            <h2>
+                <span>S</span>
+                <span>P</span>
+                <span>A</span>
+                <span>K</span>
+                <span>E</span>
+            </h2>
+            <a href="./game/snake.html">JUGAR</a>
+        </div>
+        
+        <footer class="footer-pie">
+            <label for="btn-opcion">
+                <img src="./img/config.png" class="img-config">
+            </label>
+            <label for="btn-credito"><i class="fas fa-question"></i></label>
+        </footer>
+
+        <input type="checkbox" id="btn-opcion">
+        <div class="div-opcion">
+            <div class="div-op">
+                <h2>Opciones</h2>
+
+                <div class="opcion">
+                    <div class="espanzor"></div>
+
+                    <div class="div-volumen">
+                        <img src="./icon/volume_down_black.svg" class="img-volumen">
+                        <input type="range" class="volumen" id="volumen" value="1" min="0" max="1" step="0.1" onchane="ImgVolumen()">
+                        <img src="./icon/volume_up_black.svg" class="img-volumen">
+                    </div>
+
+                    <label for="btn-opcion">Salir</label>
+                </div>
+            </div>
+        </div>
+
+        <input type="checkbox" id="btn-credito">
+        <div class="div-credito">
+            <div class="div-cre">
+                <div class="credito">
+                    <h1>Todos los creditos van a</h1>
+                    <p>Diaz Gardu&#241o Alan Fernando</p>
+                    <p>Agostomania 2021</p>
+                    <label for="btn-credito"><b>OK</b></label>
+                </div>
+            </div>
+        </div>
+
+        <audio id="song" loop autoplay>
+            <source src="./audio/Musica-Arcade.mp3" type="audio/mpeg">
+        </audio>
+
+        <script>
+            var volumen = document.getElementById('volumen');
+            var btn_informe = document.getElementById('btn-informe');
+
+            function Click() {
+                var btn_start = document.getElementById('btn-start');
+
+                btn_start.checked = false;
+            }
+
+            volumen.oninput = function(){
+                song.volume = volumen.value;
+                visablevolumen.style.width = (80 - 11) * volumen.value + "px";
+            }
+
+            function girar() {
+                var giro = document.getElementById("giro");
+
+                if(btn_informe.checked == false){
+                    giro.classList.add("giro");
+                }
+                else{
+                    giro.classList.remove("giro");
+                }
+            }
+        </script>
+    </body>
+</html>

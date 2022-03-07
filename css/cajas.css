@@ -1,0 +1,405 @@
+
+/*==================================================*/
+/*=====Caja de los diferentes estilos de cartas=====*/
+/*==================================================*/
+#btn-start{
+    display: none;
+}
+#btn-start:checked ~ .div-start{
+    visibility: visible;
+    opacity: 1;
+}
+
+.div-start{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.div-start .div-star{
+    margin: auto;
+    transform: translate(-50% -50%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-start .div-star h2{
+    border: 6px solid #744912;
+    border-radius: 100px;
+    background-color: rgb(60,90,100);
+    width: auto;
+    padding: 20px 70px;
+    font-size: 20px;
+    position: relative;
+    top: 4vh;
+}
+.div-start .div-star .start{
+    width: 400px;
+    height: auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 3px solid #744912;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-start .div-star .start label{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100px;
+    border: 4px solid #744912;
+    color: #18435f;
+}
+.div-start .div-star .start label:active{
+    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.6), inset -5px -5px 6px rgba(0,0,0,0.6),
+    inset 8px 8px 20px rgba(0,0,0,0.6), inset 5px 5px 6px rgba(0,0,0,0.6);
+}
+.div-start .div-star .start label:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+.div-start .div-star .start .espanzor{
+    width: 100%;
+    height: 25px;
+}
+.div-start .div-star .start a{
+    display: block;
+    padding: 10px;
+    width: 100%;
+    background-color: #0b222c;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    border: 4px solid #744912;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+/*==================================================*/
+
+/*==================================================*/
+/*==================Caja de Opciones================*/
+/*==================================================*/
+#btn-opcion{
+    display: none;
+}
+#btn-opcion:checked ~ .div-opcion{
+    visibility: visible;
+    opacity: 1;
+}
+
+.div-opcion{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.8s;
+}
+.div-opcion .div-op{
+    margin: auto;
+    transform: translate(-50% -50%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-opcion .div-op h2{
+    border: 6px solid #744912;
+    border-radius: 100px;
+    background-color: rgb(60,90,100);
+    width: auto;
+    padding: 20px 70px;
+    font-size: 20px;
+    position: relative;
+    top: 4vh;
+}
+.div-opcion .div-op .opcion{
+    width: 400px;
+    height: auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 3px solid #744912;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-opcion .div-op .opcion label{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100px;
+    border: 4px solid #744912;
+    color: #18435f;
+}
+.div-opcion .div-op .opcion label:active{
+    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.6), inset -5px -5px 6px rgba(0,0,0,0.6),
+    inset 8px 8px 20px rgba(0,0,0,0.6), inset 5px 5px 6px rgba(0,0,0,0.6);
+}
+.div-opcion .div-op .opcion label:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+.div-opcion .div-op .opcion .espanzor{
+    width: 100%;
+    height: 40px;
+}
+.div-opcion .div-op .opcion .div-volumen{
+    display: flex;
+    width: 94%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.volumen{
+  display: block;
+  width: 95%;
+}
+.volumen:focus {
+  outline: none;
+}
+.volumen,
+.volumen::-webkit-slider-runnable-track,
+.volumen::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+.volumen::-webkit-slider-thumb {
+  background-color: #777;
+  width: 22px;
+  height: 22px;
+  border: 3px solid #333;
+  border-radius: 50%;
+  margin-top: -9px;
+}
+.volumen::-moz-range-thumb {
+  background-color: #777;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+.volumen::-ms-thumb {
+  background-color: #777;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #333;
+  border-radius: 50%;
+}
+.volumen::-webkit-slider-runnable-track {
+  background-color: #777;
+  height: 5px;
+}
+.volumen:focus::-webkit-slider-runnable-track {
+  outline: none;
+}
+.volumen::-moz-range-track {
+  background-color: #777;
+  height: 5px;
+}
+.volumen::-ms-track {
+  background-color: #777;
+  height: 5px;
+}
+.volumen::-ms-fill-lower {
+  background-color: HotPink
+}
+.volumen::-ms-fill-upper {
+  background-color: black;
+} 
+/*==================================================*/
+
+/*==================================================*/
+/*================Caja de los creditos==============*/
+/*==================================================*/
+#btn-credito{
+    display: none;
+}
+#btn-credito:checked ~ .div-credito{
+    visibility: visible;
+    opacity: 1;
+}
+
+.div-credito{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.div-credito .div-cre{
+    margin: auto;
+    transform: translate(-50% -50%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-credito .div-cre .credito{
+    width: 500px;
+    height: auto;
+    padding: 25px;
+    background-color: #ffffffc2;
+    border: 3px solid #744912;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.div-credito .div-cre .credito h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #111;
+}
+.div-credito .div-cre .credito p{
+    font-size: 40px;
+    color: #333;
+}
+.div-credito .div-cre .credito label{
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100px;
+    border: 4px solid #744912;
+    color: #18435f;
+}
+.div-credito .div-cre .credito label:active{
+    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.6), inset -5px -5px 6px rgba(0,0,0,0.6),
+    inset 8px 8px 20px rgba(0,0,0,0.6), inset 5px 5px 6px rgba(0,0,0,0.6);
+}
+.div-credito .div-cre .credito label:hover{
+    background-color: rgba(0,0,0,0.4);
+}
+.div-credito .div-cre .credito p{
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+/*==================================================*/
+
+/*==================================================*/
+/*===============Caja de la informacion=============*/
+/*==================================================*/
+#btn-informe{
+    display: none;
+}
+#btn-informe:checked ~ .div-informe{
+    opacity: 1;
+    visibility: visible;
+}
+
+.div-informe{
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+.div-informe .div-inf{
+    margin: auto;
+    transform: translate(-50% -50%);
+    position: relative;
+    display: flex;
+    /*flex-direction: column;
+    align-items: center;*/
+    justify-content: center;
+}
+.div-informe .div-inf .informe{
+    width: 800px;
+    height: 400px;
+    padding: 25px;
+    background-color: #ffffffc2;
+    border: 3px solid #744912;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.div-informe .div-inf .informe::-webkit-scrollbar{
+    width: 12px;
+}
+.div-informe .div-inf .informe::-webkit-scrollbar-thumb{
+    background: #111;
+    border-radius: 100px;
+}
+.div-informe .div-inf .informe::-webkit-scrollbar-thumb:hover{
+    background-color: #333;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 18%;
+    border-radius: 10px;
+    position: fixed;
+    padding: 15px;
+    margin-top: 20px;
+    margin-left: 15px;
+    background-color: #18435f;
+}
+.menu a{
+    width: 100%;
+    border-radius: 100px;
+    border: #888 1px solid;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffff;
+    background-color: #333;
+}
+
+.div-info{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 15px;
+}
+/*==================================================*/

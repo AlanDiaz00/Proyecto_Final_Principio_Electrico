@@ -1,0 +1,70 @@
+/*=============================================*/
+/*===========Formulario de Contacto============*/
+/*=============================================*/
+.div-formulario .form-formulario{
+    background-color: rgba(0,0,0,0.6);
+    position: relative;
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 5px 35px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+.div-formulario .form-formulario label{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+}
+.div-formulario .form-formulario .form-input, .form-texarea{
+    background-color: rgba(0,0,0,0.7);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #4357ad;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+.div-formulario .form-formulario .form-texarea{
+    resize: vertical;
+    max-height: 150px;
+    min-height: 50px;
+}
+.div-formulario .form-formulario .btn-submit{
+    width: 100%;
+    outline: none;
+    background-color: #4357ad;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 15px 0px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.div-formulario .form-formulario .btn-submit:hover{
+    background-color: #24303c;
+}
+.div-formulario .form-formulario .div-texto .form-titulo{
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    padding: 14px 0px;
+}
+
+@media  (max-width: 600px){
+    .div-formulario .form-formulario{
+        margin-top: 60px;
+        margin-bottom: 30px;
+        padding: 5px 35px;
+    }
+    .div-formulario .form-formulario .btn-submit{
+        margin-bottom: 25px;
+    }
+}
+/*=============================================*/
